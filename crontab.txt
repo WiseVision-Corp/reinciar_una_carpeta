@@ -1,0 +1,2 @@
+crontab -e
+0 18 * * * /bin/bash     /monit/IBM/trivoli/script.sh
