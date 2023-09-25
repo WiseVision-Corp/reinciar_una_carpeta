@@ -1,8 +1,8 @@
 #!/bin/bash
 
 ruta_directorio="/monit/IBM/tivoli/impact"  # Ruta del directorio a respaldar
-ruta_respaldo="/monit/IBM/tivoli/carpeta_respaldo"  # Ruta del directorio de respaldo donde se guardarán los archivos
-ruta_log="/monit/IBM/tivoli/log-respaldo.txt"  # Ruta del archivo de log para guardar los datos de reinicio y respaldo
+ruta_respaldo="/monit/IBM/tivoli/carpeta_respaldo_impact"  # Ruta del directorio de respaldo donde se guardarán los archivos
+ruta_log="/monit/IBM/tivoli/log-respaldo_impact.txt"  # Ruta del archivo de log para guardar los datos de reinicio y respaldo
 
 # Fecha y hora actual
 fecha_actual=$(date +"%Y-%m-%d %H:%M:%S")
@@ -34,8 +34,7 @@ rm -r "${ruta_respaldo_fecha}" >> "${ruta_log}" 2>&1
 echo "Directorio reiniciado y respaldado el ${fecha_actual}" >> "${ruta_log}"
 
 # Vaciar el contenido de la carpeta1
-rm -r "${ruta_directorio}"/* >> "${ruta_log}" 2>&1
-
+#rm -r "${ruta_directorio}"/* >> "${ruta_log}" 2>&1
 
 echo "Directorio reiniciado y respaldado exitosamente."
 
